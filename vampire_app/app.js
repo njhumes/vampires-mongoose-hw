@@ -30,6 +30,60 @@ mongoose.connect(connectionString);
 
 // ### Add some new vampire data
 
+// Vampire.create({
+//     name: 'Nick',
+//     hair_color: 'brown',
+//     eye_color: 'brown',
+//     dob: new Date(1990, 12, 20),
+//     loves: ['snowboarding', 'guitars'],
+//     location: 'Boulder',
+//     gender: 'm',
+//     victims: 2
+// }, (err, vampireNick) => {
+//     if (err) { //if there's an error, log it
+//         console.log(err);
+//     } else { //else log the created article
+//         console.log(vampireNick);
+//         mongoose.connection.close();
+//     }
+// });
+// Vampire.create([{
+//     name: 'Frankenstein',
+//     hair_color: 'black',
+//     eye_color: 'brown',
+//     dob: new Date(1823, 5, 12),
+//     loves: ['lightning', 'monster mash'],
+//     location: 'Nowheresville',
+//     gender: 'm',
+//     victims: 100
+//     },
+//     {
+//     name: 'Kate Beckinsale',
+//     hair_color: 'black',
+//     eye_color: 'blue',
+//     dob: new Date(1973, 7, 26),
+//     loves: ['underworld', 'van helsing'],
+//     location: 'Los Angeles',
+//     gender: 'f',
+//     victims: 33
+//     },
+//     {
+//     name: 'Drusilla',
+//     hair_color: 'brown',
+//     eye_color: 'hazel',
+//     dob: new Date(1997, 8, 22),
+//     loves: ['buffy', 'vampire slayers'],
+//     location: 'Sunnydale',
+//     gender: 'f',
+//     victims: 42
+//     }], (err, vampireCreated) => {
+//         if (err) { //if there's an error, log it
+//         console.log(err);
+//     }   else { //else log the created article
+//         console.log(vampireCreated);
+//         mongoose.connection.close();
+//     }
+// });
 /////////////////////////////////////////////////
 // ## QUERYING
 /////////////////////////////////////////////////
