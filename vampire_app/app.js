@@ -88,7 +88,58 @@ mongoose.connect(connectionString);
 // ## QUERYING
 /////////////////////////////////////////////////
 // ### Select by comparison
+// Find Females
+// Vampire.find(
+//     {gender: 'f'},
+//     (err, findVampire) => {
+//         if(err){
+//             console.log(err)
+//         }else{
+//             console.log(findVampire)
+//             mongoose.connection.close();
+//         }
+//     })
 
+//  find greater than 500 victims
+// Vampire.find({victims: {$gt: 500}},
+//     (err, findVampire)=>{
+//         if(err){
+//             console.log(err)
+//         } else {
+//             console.log(findVampire)
+//             mongoose.connection.close()
+//         }
+//     })
+
+// finder fewer or equal to 150 victims
+// Vampire.find({victims: {$lte: 150}},
+//     (err, findVampire)=>{
+//         if(err){
+//             console.log(findVampire)
+//         } else {
+//             console.log(findVampire)
+//         }
+//     })
+
+// have a victim count is not equal to 210234
+// Vampire.find({ victims: {$ne: 210234}},
+//     (err, findVampire) => {
+//         if(err){
+//             console.log(findVampire)
+//         } else {
+//             console.log(findVampire)
+//         }
+//     })
+
+// have greater than 150 and fewer than 500 
+// Vampire.find({victims: {$gt: 150, $lte: 500}},
+//     (err, findVampire)=>{
+//         if(err){
+//             console.log(err)
+//         } else {
+//             console.log(findVampire)
+//         }
+//     })
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
