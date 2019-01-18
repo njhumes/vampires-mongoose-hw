@@ -173,17 +173,66 @@ mongoose.connect(connectionString);
 //     })
 
 // has vitims and they are greater than 100
-Vampire.find({victims: {$exists: true, $gte: 100}},
-    (err, vampires) =>{
-        if(err) {
-            console.log(err)
-        } else {
-            console.log(vampires)
-        }
-    })
+// Vampire.find({victims: {$exists: true, $gte: 100}},
+//     (err, vampires) =>{
+//         if(err) {
+//             console.log(err)
+//         } else {
+//             console.log(vampires)
+//         }
+//     })
 /////////////////////////////////////////////////
 // ### Select with OR
+// from Ny, or NO
+// Vampire.find(
+//     {$or:[{ location: 'New York, New York, US'}, 
+//     {location: 'New Orleans, Louisiana, US'}]},
+//     (err, vampires) => {
+//         if(err){
+//          console.log(err)
+//         } else {
+//             console.log(vampires)
+//     }
+// })
 
+// loves boording or being tragic
+// Vampire.find({$or: [
+//     {loves: 'brooding'},
+//     {loves: 'being tragic'}]},
+//     (err, vampires) => {
+//         if(err){
+//             console.log(err)
+//         } else {
+//             console.log(vampires)
+//         }
+//     }
+// )
+
+// gte 1000 victims or loves marshmallows
+// Vampire.find({$or: [
+//     {victims: {$gte: 1000}},
+//     {loves: 'marshmallows'}
+// ]},
+// (err, vampire)=>{
+//     if(err){
+//         console.log(err)
+//     } else {
+//         console.log(vampire)
+//     }
+// })
+
+// red hair or green eyes
+// Vampire.find({$or: [
+//     {hair_color: 'red'},
+//     {eye_color: 'green'}
+// ]},
+// (err, vampire)=>{
+//     if(err){
+//         console.log(err)
+//     } else {
+//         console.log(vampire)
+//     }
+// })
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
 
