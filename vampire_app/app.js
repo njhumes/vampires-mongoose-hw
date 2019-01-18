@@ -142,7 +142,45 @@ mongoose.connect(connectionString);
 //     })
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
+// Has a title property
+// Vampire.find({title: {$exists: true}},
+//     (err, selectVampire) => {
+//         if(err){
+//             console.log(err)
+//         } else {
+//             console.log(selectVampire)
+//         }
+//     });
 
+// Does not have a victims 
+// Vampire.find({victims: {$exists: false}},
+//     (err, vampire) => {
+//         if (err) {
+//             console.log(err)
+//         } else {
+//             console.log(vampire)
+//         }
+//     })
+
+// Has title and no victims
+// Vampire.find({title: {$exists: true}, victims: {$exists: false}},
+//     (err, vampire) => {
+//         if(err) {
+//             console.log(err)
+//         } else {
+//             console.log(vampire)
+//         }
+//     })
+
+// has vitims and they are greater than 100
+Vampire.find({victims: {$exists: true, $gte: 100}},
+    (err, vampires) =>{
+        if(err) {
+            console.log(err)
+        } else {
+            console.log(vampires)
+        }
+    })
 /////////////////////////////////////////////////
 // ### Select with OR
 
